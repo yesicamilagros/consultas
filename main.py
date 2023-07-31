@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 import pandas as pd
-#from fastapi import File, UploadFile, FastAPI
 import uvicorn 
 from datetime import datetime
 from scipy import spatial
@@ -76,7 +75,7 @@ def cantidad_filmaciones_dia(dia:str):
       for i in pf_date['release_date']:
         if dic[dayofweek(datetime.strptime(i, "%Y-%m-%d").day,datetime.strptime(i, "%Y-%m-%d").month , datetime.strptime(i, "%Y-%m-%d").year)]==day:
             k=k+1
-      return {'dia':day, 'cantidad de filmaciones':k}
+      return {'dia' : day, 'cantidad de filmaciones':k}
     else:
       return ' dia no  definida' 
 
