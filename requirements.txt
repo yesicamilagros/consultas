@@ -1,4 +1,4 @@
-﻿fastapi==0.100.1
-pandas==1.5.2
-scipy==1.9.3
-uvicorn==0.23.2
+﻿fastapi
+pandas
+scipy
+uvicorn
