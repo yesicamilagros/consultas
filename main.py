@@ -24,12 +24,12 @@ def dayofweek(d, m, y):
              + int(y / 400) + t[m - 1] + d) % 7)
 
 
-pf22=pd.read_csv(r'dataset\get_actor.csv')
-pf_titulo=pd.read_csv(r'dataset\score_titulo.csv')
-pf_votos_titulo=pd.read_csv(r'dataset\votos_titulo.csv')
-pf_date=pd.read_csv(r'dataset\cantidad_filmaciones_dia.csv')
-pf_director=pd.read_csv(r'dataset\get_director.csv')
-movies=pd.read_csv(r'dataset\movies1.csv')
+pf22=pd.read_csv(r'dataset/get_actor.csv')
+pf_titulo=pd.read_csv(r'dataset/score_titulo.csv')
+pf_votos_titulo=pd.read_csv(r'dataset/votos_titulo.csv')
+pf_date=pd.read_csv(r'dataset/cantidad_filmaciones_dia.csv')
+pf_director=pd.read_csv(r'dataset/get_director.csv')
+movies=pd.read_csv(r'dataset/movies1.csv')
 
 @app.get('/cantidad_filmaciones_mes/{mes}')
 def cantidad_filmaciones_mes(mes:str):
