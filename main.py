@@ -97,8 +97,8 @@ def votos_titulo(titulo:str):
    la cantidad de votos y el valor promedio de las votaciones. '''
   t=titulo.strip()
   if t in list(pf_votos_titulo['title']):
-        if pf_votos_titulo['vote_count'][list(pf_votos_titulo[pf_votos_titulo['title']==t].index.values)[0]]>2000:
-           return {'nombre de la pelicula estrenada':t,'año': str(pf_votos_titulo['release_year'][list(pf_votos_titulo[pf_votos_titulo['title']==t].index.values)[0]]),'cantidad de votos':str(pf_votos_titulo['vote_count'][list(pf_votos_titulo[pf_votos_titulo['title']==t].index.values)[0]]),'voto promedio':str(pf_votos_titulo['vote_average'][list(pf_votos_titulo[pf_votos_titulo['title']==t].index.values)[0]])}
+        if pf_votos_titulo['vote_count_max'][list(pf_votos_titulo[pf_votos_titulo['title']==t].index.values)[0]]>2000:
+           return {'nombre de la pelicula estrenada':t,'año': str(pf_votos_titulo['release_year'][list(pf_votos_titulo[pf_votos_titulo['title']==t].index.values)[0]]),'cantidad de votos':str(pf_votos_titulo['vote_count_max'][list(pf_votos_titulo[pf_votos_titulo['title']==t].index.values)[0]]),'voto promedio':str(pf_votos_titulo['vote_average_prom'][list(pf_votos_titulo[pf_votos_titulo['title']==t].index.values)[0]])}
         else:  
             return {'vote_count<=2000'}
   else:
